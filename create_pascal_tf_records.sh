@@ -1,4 +1,6 @@
 #!/bin/bash
+# 2019-05-13
+# How to fix the «No module named 'lxml'» Puthon error in Ubuntu 18.04? https://df.tips/t/906
 input='/w/data/VOCdevkit'
 objectDetection='/w/tools/tensorflow/models/research/object_detection/'
 output='/w/tutorials/tensorflow/pascal-voc/data/'
