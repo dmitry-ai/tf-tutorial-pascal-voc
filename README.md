@@ -1,0 +1,1 @@
+My attempt to run a TensorFlow training on the PASCAL VOC dataset in Ubuntu 18.04.
