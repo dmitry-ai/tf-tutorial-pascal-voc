@@ -1,7 +1,7 @@
 #!/bin/bash
 input='/w/data/VOCdevkit'
 objectDetection='/w/tools/tensorflow/models/research/object_detection/'
-output='/w/tutorials/tensorflow/2019-05-13/data/'
+output='/w/tutorials/tensorflow/pascal-voc/data/'
 declare -A targets=( \
 	[train]='pascal_train.record' \
 	[val]='pascal_val.record' \
