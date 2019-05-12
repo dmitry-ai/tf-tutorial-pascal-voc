@@ -8,7 +8,7 @@ declare -A targets=( \
 	[val]='pascal_val.record' \
 )
 for type in "${!targets[@]}"; do
-	python3 ${objectDetection}dataset_tools/create_pascal_tf_record.py \
+	python ${objectDetection}dataset_tools/create_pascal_tf_record.py \
 		--label_map_path=${objectDetection}data/pascal_label_map.pbtxt \
 		--data_dir=$input \
 		--year=VOC2012 \
