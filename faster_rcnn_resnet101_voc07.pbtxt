@@ -5,23 +5,13 @@
 # should be configured.
 model {
 	faster_rcnn {
+		# 2019-05-13 «Number of classes to predict»
+		# https://github.com/tensorflow/models/blob/v1.13.0/research/object_detection/protos/faster_rcnn.proto#L25-L26
 		num_classes: 20
 		image_resizer {
 			# 2019-05-13
-			# 1) «Specifying the `keep_aspect_ratio_resizer` follows the image resizing scheme
-			# described in the Faster R-CNN paper.
-			# In this case it always resizes an image
-			# so that the smaller edge is 600 pixels
-			# and if the longer edge is greater than 1024 edges,
-			# it resizes such that the longer edge is 1024 pixels.
-			# The resulting image always has the same aspect ratio as the input image.»
-			# https://github.com/tensorflow/models/issues/1794#issuecomment-311569473
-			#
-			# 2) «The bounding box coordinates are normalised to the range [0 .. 1],
-			# so resizing the images won't affect those annotations.
-			# Masks are resized or otherwise transformed along with the image,
-			# and always have the same dimensions as the image.»
-			# https://github.com/tensorflow/models/issues/1794#issuecomment-432929170
+			# What does mean «faster_rcnn» → «image_resizer» → «keep_aspect_ratio_resizer»?
+			# https://dmitry.ai/t/61
 			keep_aspect_ratio_resizer {
 				max_dimension: 1024
 				min_dimension: 600
