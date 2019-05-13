@@ -5,12 +5,11 @@
 # should be configured.
 model {
 	faster_rcnn {
-		# 2019-05-13 «Number of classes to predict»
-		# https://github.com/tensorflow/models/blob/v1.13.0/research/object_detection/protos/faster_rcnn.proto#L25-L26
+		# 2019-05-13 What does mean «faster_rcnn» → «num_classes» in TensorFlow? https://dmitry.ai/t/62
 		num_classes: 20
 		image_resizer {
 			# 2019-05-13
-			# What does mean «faster_rcnn» → «image_resizer» → «keep_aspect_ratio_resizer»?
+			# What does mean «faster_rcnn» → «image_resizer» → «keep_aspect_ratio_resizer» in TensorFlow?
 			# https://dmitry.ai/t/61
 			keep_aspect_ratio_resizer {
 				max_dimension: 1024
