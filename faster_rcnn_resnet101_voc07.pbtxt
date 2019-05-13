@@ -16,6 +16,7 @@ model {
 				min_dimension: 600
 			}
 		}
+		# 2019-05-13 https://en.wikipedia.org/wiki/Feature_extraction
 		feature_extractor {
 			type: 'faster_rcnn_resnet101'
 			first_stage_features_stride: 16
