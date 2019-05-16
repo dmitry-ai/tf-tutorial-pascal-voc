@@ -17,6 +17,7 @@ model {
 			}
 		}
 		# 2019-05-13 https://en.wikipedia.org/wiki/Feature_extraction
+		# 2019-05-16 "What is «feature extraction» in machine learning?" https://dmitry.ai/t/73
 		feature_extractor {
 			type: 'faster_rcnn_resnet101'
 			first_stage_features_stride: 16
