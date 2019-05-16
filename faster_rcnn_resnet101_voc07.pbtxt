@@ -90,7 +90,13 @@ model {
 	}
 }
 train_config: {
-	batch_size: 1
+	# 2019-05-17
+	# 1) What does mean «train_config» → «batch_size» in TensorFlow?  https://dmitry.ai/t/98
+	# 2) What is the optimal batch size for a TensorFlow training? https://dmitry.ai/t/100
+	# 3) How to estimate the maximum allowed batch size for a TensorFlow training? https://dmitry.ai/t/102
+	batch_size: 1024
+	data_augmentation_options {random_horizontal_flip {}}
+	gradient_clipping_by_norm: 10.0
 	optimizer {
 		momentum_optimizer: {
 			learning_rate: {
@@ -110,11 +116,8 @@ train_config: {
 		}
 		use_moving_average: false
 	}
-	gradient_clipping_by_norm: 10.0
+	# 2019-05-17 What does mean «train_config» → «num_steps» in TensorFlow?  https://dmitry.ai/t/99
 	num_steps: 800000
-	data_augmentation_options {
-		random_horizontal_flip {}
-	}
 }
 train_input_reader: {
 	tf_record_input_reader {
