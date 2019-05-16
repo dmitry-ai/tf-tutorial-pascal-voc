@@ -17,9 +17,12 @@ model {
 			}
 		}
 		# 2019-05-13 https://en.wikipedia.org/wiki/Feature_extraction
-		# 2019-05-16 "What is «feature extraction» in machine learning?" https://dmitry.ai/t/73
+		# 2019-05-16 What is «feature extraction» in machine learning? https://dmitry.ai/t/73
 		feature_extractor {
 			type: 'faster_rcnn_resnet101'
+			# 2019-05-16
+			# What does mean «model» → «faster_rcnn» → «feature_extractor» →
+			# «first_stage_features_stride» in TensorFlow? https://dmitry.ai/t/92
 			first_stage_features_stride: 16
 		}
 		first_stage_anchor_generator {
@@ -30,6 +33,9 @@ model {
 				width_stride: 16
 			}
 		}
+		# 2019-05-16
+		# What does mean «model» → «faster_rcnn» → «first_stage_box_predictor_conv_hyperparams» in TensorFlow?
+		# https://dmitry.ai/t/97
 		first_stage_box_predictor_conv_hyperparams {
 			op: CONV
 			regularizer {
