@@ -119,7 +119,7 @@ train_config: {
 		use_moving_average: false
 	}
 	# 2019-05-17 What does mean «train_config» → «num_steps» in TensorFlow?  https://dmitry.ai/t/99
-	num_steps: 800000
+	num_steps: 10000
 }
 train_input_reader: {
 	tf_record_input_reader {
