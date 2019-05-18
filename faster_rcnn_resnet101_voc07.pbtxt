@@ -95,6 +95,8 @@ train_config: {
 	# 2) What is the optimal batch size for a TensorFlow training? https://dmitry.ai/t/100
 	# 3) How to estimate the maximum allowed batch size for a TensorFlow training? https://dmitry.ai/t/102
 	batch_size: 1
+	# 2019-05-18
+	# What does mean «train_config» → «data_augmentation_options» in TensorFlow? https://dmitry.ai/t/105
 	data_augmentation_options {random_horizontal_flip {}}
 	gradient_clipping_by_norm: 10.0
 	fine_tune_checkpoint: "/w/data/pre-trained/faster_rcnn_resnet101_coco_2018_01_28/model.ckpt"
