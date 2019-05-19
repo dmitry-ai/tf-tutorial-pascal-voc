@@ -7,6 +7,7 @@ model {
 	faster_rcnn {
 		# 2019-05-13 What does mean «faster_rcnn» → «num_classes» in TensorFlow? https://dmitry.ai/t/62
 		num_classes: 20
+		# 2019-05-19 What does mean «faster_rcnn» → «image_resizer» in TensorFlow? https://dmitry.ai/t/108
 		image_resizer {
 			# 2019-05-13
 			# What does mean «faster_rcnn» → «image_resizer» → «keep_aspect_ratio_resizer» in TensorFlow?
